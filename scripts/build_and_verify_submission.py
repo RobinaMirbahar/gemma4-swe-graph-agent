@@ -171,7 +171,7 @@ def main() -> None:
     archived = build_submission_zip()
     print(f"\n[PASS] Built {ZIP_OUT.name} ({ZIP_OUT.stat().st_size:,} bytes) with {len(archived)} root-relative entries:")
     for item in archived:
-        print(f"       ├── {item}")
+        print(f"       |-- {item}")
 
     benchmarks = run_ablation_benchmarks()
     bench_out = REPO_ROOT / "ablation_benchmarks.json"
@@ -179,7 +179,7 @@ def main() -> None:
     print(f"\n[PASS] Saved Ablation Benchmarks -> {bench_out.name}")
     for row in benchmarks["configurations"]:
         print(
-            f"  • {row['config_id']:<44} | Resolved: {row['resolved_pct']:>4.1f}% | "
+            f"  * {row['config_id']:<44} | Resolved: {row['resolved_pct']:>4.1f}% | "
             f"Tokens: {row['avg_context_tokens']:>5} | Time: {row['Projected_50_Task_Wall_Clock_Hours']:>4.1f}h"
         )
 
