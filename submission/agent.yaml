@@ -1,0 +1,22 @@
+agent_class: LlmAgent
+name: gemma_developer_agent
+model: gemma-4-12b-it-qat-w4a16-ct
+description: "Graph-guided autonomous software engineering coordinator powered by Gemma 4 (QAT W4A16)."
+
+generation_config: !include configs/sampling.yaml
+system_instruction: !include prompts/system.md
+
+tools:
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph
+  - read_file
+  - edit_file
+  - write_file
+  - run_command
+  - get_status
+  - submit_patch
+
+sub_agents:
+  - name: code_analyzer
+    config_path: sub_agents/code_analyzer.yaml
