@@ -84,3 +84,9 @@ python scripts/build_and_verify_submission.py
 [![Amazon Author](https://img.shields.io/badge/Amazon_Book-Cloud_Computing_Voyage-FF9900?style=for-the-badge&logo=amazon)](https://www.amazon.com/dp/B0D146249R)
 
 <!-- AUTHOR_SIGNATURE_END -->
+
+---
+
+### Official Google Developer Resources
+- [Google Gemma Open Models Documentation](https://ai.google.dev/gemma?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Google Agent Development Kit (ADK) Docs](https://google.github.io/adk-docs/?utm_campaign=deveco_gdemembers&utm_source=deveco)
