@@ -2,10 +2,6 @@
 
 ![Gemma 4 Developer Agent Cover](assets/gemma4_swe_paper_cover.jpg)
 
-> **Official Submission & Research Paper Repository — Google: The Gemma 4 Developer Agent Competition & Paper Track**  
-> **Author:** **Robina Mirbahar — Google Cloud & AI Architect** (`@robinamirbahar`)  
-> **License:** **Apache License 2.0** (OSI-Approved, Commercial-Friendly Open Source License)
-
 > **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) ([Google Developer Expert in Cloud & AI](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco) · Google Cloud Champion Innovator · Co-Author of [*AI Engineering*](https://www.amazon.com/dp/B0GWCZWCF4))  
 > 📚 **Competition & Paper Track:** Google — The Gemma 4 Developer Agent Competition & Paper Track (SWE-Gemma Benchmark)  
 > **Core Stack:** Quantized [Google Gemma 4](https://ai.google.dev/gemma/docs?utm_campaign=deveco_gdemembers&utm_source=deveco) (gemma-4-12b-it-qat-w4a16-ct), Declarative Sub-Agents (gent.yaml / code_analyzer.yaml), 2-Hop Structural Code-Graph Tools (swegemma.graph), and vLLM.
@@ -23,9 +19,7 @@ In this work, we introduce a **Graph-Guided Declarative Sub-Agent Architecture**
 
 ![Graph-Guided Declarative Sub-Agent Architecture](assets/gemma4_swe_graph_arch.jpg)
 
-### 📐 Color-Coded Graph-Guided Declarative Sub-Agent Flow
-> *(🩷 Pink = SWE-Gemma Issue & Declarative YAML | 💙 Blue = Low-Temp 2-Hop Code-Graph Sub-Agent | 💚 Green = Root LlmAgent Patch Synthesis | 💜 Purple = Sandboxed Pytest Verification & 54.0% Resolution)*
-
+### 📐 Graph-Guided Declarative Sub-Agent Flow
 ```mermaid
 flowchart TD
     subgraph Input ["1. SWE-Gemma Task & Declarative Manifest (agent.yaml)"]
@@ -42,12 +36,6 @@ flowchart TD
         V_Test["Isolated pytest Execution & Regression Check (0.0% Timeout)"]
     end
     T_Issue --> G_Hop1 --> G_Hop2 --> R_Patch --> V_Test
-
-    style T_Issue fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style G_Hop1 fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style G_Hop2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style R_Patch fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
-    style V_Test fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
 ```
 
 
